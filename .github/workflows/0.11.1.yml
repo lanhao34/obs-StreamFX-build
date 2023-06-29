@@ -34,6 +34,9 @@ jobs:
         repository: "Xaymar/obs-StreamFX"
         submodules: recursive
         fetch-depth: 0
+    - name: "Check Out"
+      run: |
+        git checkout 0.11.1
     - name: "libobs: Cache"
       if: ${{ github.event_name != 'pull_request' }}
       uses: actions/cache@v2
